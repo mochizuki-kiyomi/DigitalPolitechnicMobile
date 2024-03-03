@@ -1,24 +1,109 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:services="clr-namespace:DigitalPolitechnicMobile.Services"
              x:Class="DigitalPolitechnicMobile.MainPage">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-    </StackLayout>
+    <ContentPage.Content>
+
+        <Grid RowDefinitions="70, 70, *, 70" 
+          ColumnDefinitions="*, *, *, *, *"
+          BackgroundColor="#F2FEFF">
+
+            <Frame Grid.Row="0"
+               Grid.ColumnSpan="5"
+               BackgroundColor="#255AA6"
+               Padding="0, 16">
+                <Label Text="НАЦІОНАЛЬНИЙ УНІВЕРСИТЕТ&#xD;''ЗАПОРІЗЬКА ПОЛІТЕХНІКА''"
+                   FontAttributes="Bold"
+                   FontSize="20"
+                   HorizontalTextAlignment="Center"
+                   TextColor="#FFCC00"/>
+            </Frame>
+
+            <CarouselView Grid.Row="1"
+                          Grid.ColumnSpan="5"   
+                          Margin="30,5,30,5"
+                          ItemsSource="{Binding ImportantAnnounce}"
+                          BackgroundColor="#B6D2D4">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Grid.Row="0"
+                               Grid.ColumnSpan="4"
+                               CornerRadius="20"
+                               Padding="-20"
+                               Margin="15"
+                               BackgroundColor="#9DA7D0">
+                            <Label FontSize="16"
+                                   FontAttributes="Bold"
+                                   TextColor="#000000"  
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   x:DataType="services:ImportantAnnounce"
+                                   Text="{Binding Name}"/>
+                        </Frame>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+
+            <ListView Grid.Row="2"
+                      Grid.ColumnSpan="5"
+                      x:Name="AnnouncementList"
+                      ItemsSource="{Binding News}"
+                      Margin="30, 10, 30, 5"
+                      BackgroundColor="#B6D2D4">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid ColumnDefinitions="Auto, *, *, Auto">
+                                    <Image Source="Resources/drawable/logo.jpg"/>
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+            <Frame Grid.Row="3"
+               Grid.ColumnSpan="5"
+               BackgroundColor="#C8E9EC"/>
+
+            <Button Grid.Row="3"
+                Grid.Column="0"
+                Text="🏠"
+                FontSize="24"
+                BackgroundColor="Transparent"
+                Margin="10"/>
+            <Button Grid.Row="3"
+                Grid.Column="1"
+                Text="🗺"
+                FontSize="24"
+                BackgroundColor="Transparent"
+                Margin="10"/>
+            <Button Grid.Row="3"
+                Grid.Column="2"
+                Text="👤"
+                FontSize="24"
+                BackgroundColor="Transparent"
+                Margin="10"/>
+            <Button Grid.Row="3"
+                Grid.Column="3"
+                Text="☎️"
+                FontSize="24"
+                BackgroundColor="Transparent"
+                Margin="10"/>
+            <Button Grid.Row="3"
+                Grid.Column="4"
+                Text="☰"
+                FontSize="24"
+                TextColor="#000000"
+                BackgroundColor="Transparent"
+                Margin="10"/>
+        </Grid>
+
+
+    </ContentPage.Content>
 
 </ContentPage>

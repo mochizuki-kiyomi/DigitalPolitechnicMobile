@@ -3,10 +3,55 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DigitalPolitechnicMobile.Views.LogInPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+
+        <Grid RowDefinitions="*, 40, 60, 60, 60, *"
+          ColumnDefinitions="*, *"
+          BackgroundColor="#F2FEFF">
+
+
+            <Label Grid.Row="1"
+               Grid.ColumnSpan="2"
+               Text="Log In with Moodle"
+               FontSize="24"
+               TextColor="#000000"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+
+            <Entry Grid.Row="2"
+               Grid.ColumnSpan="2"
+               Margin="50, 10"
+               WidthRequest="300"
+               Text="{Binding Login}"
+               FontSize="20"
+               TextColor="#000000"
+               Placeholder="Email addres or Username"
+               BackgroundColor="#FFFFFF"/>
+
+
+            <Entry Grid.Row="3"
+               Grid.ColumnSpan="2"
+               Margin="50, 10"
+               WidthRequest="300"
+               Text="{Binding Password}"
+               FontSize="20"
+               TextColor="#000000"
+               Placeholder="Password"
+               BackgroundColor="#FFFFFF"/>
+
+            <Button Grid.Row="4"
+                Grid.ColumnSpan="2"
+                Text="Log In"
+                FontSize="20"
+                TextColor="#FFFFFF"
+                WidthRequest="300"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Margin="50, 10"
+                BackgroundColor="#255AA6"
+                CornerRadius="15"
+                Command="{Binding Authorization}"/>
+
+        </Grid>
+
     </ContentPage.Content>
 </ContentPage>
