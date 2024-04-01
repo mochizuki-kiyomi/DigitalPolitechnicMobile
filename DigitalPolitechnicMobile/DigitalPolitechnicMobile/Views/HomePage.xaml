@@ -50,7 +50,7 @@
             <ListView Grid.Row="2"
                       Grid.ColumnSpan="5"
                       x:Name="AnnouncementList"
-                      ItemsSource="Binding News}"
+                      ItemsSource="{Binding News}"
                       Margin="30, 10, 30, 5"
                       BackgroundColor="#B6D2D4">
                 <ListView.ItemTemplate>

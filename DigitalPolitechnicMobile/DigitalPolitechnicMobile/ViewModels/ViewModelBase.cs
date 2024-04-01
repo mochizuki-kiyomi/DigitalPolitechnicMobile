@@ -7,7 +7,7 @@ using System.Text;
 
 namespace DigitalPolitechnicMobile.ViewModels
 {
-    class ViewModelBase : BindableBase
+    class ViewModelBase : BindableBase, INavigationAware, IDestructible
     {
         protected INavigationService NavigationService { get; private set; }
 

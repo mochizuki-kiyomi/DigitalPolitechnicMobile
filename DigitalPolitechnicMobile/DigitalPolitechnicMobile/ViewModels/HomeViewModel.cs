@@ -1,8 +1,11 @@
 ﻿using DigitalPolitechnicMobile.Services;
+using DigitalPolitechnicMobile.Views;
+using Prism.Commands;
 using Prism.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Input;
 
 namespace DigitalPolitechnicMobile.ViewModels
 {
@@ -34,7 +37,11 @@ namespace DigitalPolitechnicMobile.ViewModels
 
 
 
-
+        private ICommand map;
+        public ICommand Map
+        {
+            get => map ??= new DelegateCommand(async () => await NavigationService.NavigateAsync(nameof(MapPage)));
+        }
 
     }
 }
