@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DigitalPolitechnicMobile.Models
 {
-    class Annouce
+    class Announce
     {
 
         private int? Id { get; set; }

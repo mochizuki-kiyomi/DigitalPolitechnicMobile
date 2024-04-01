@@ -36,6 +36,11 @@ namespace DigitalPolitechnicMobile.ViewModels
             get => importantAnnounce; set => SetProperty(ref importantAnnounce, value); }
 
 
+        private ICommand home;
+        public ICommand Home
+        {
+            get => home ??= new DelegateCommand(async () => await NavigationService.NavigateAsync(nameof(HomePage)));
+        }
 
         private ICommand map;
         public ICommand Map
@@ -43,5 +48,22 @@ namespace DigitalPolitechnicMobile.ViewModels
             get => map ??= new DelegateCommand(async () => await NavigationService.NavigateAsync(nameof(MapPage)));
         }
 
+        private ICommand profile;
+        public ICommand Profile
+        {
+            get => profile ??= new DelegateCommand(async () => await NavigationService.NavigateAsync(nameof(ProfilePage)));
+        }
+
+        private ICommand phones;
+        public ICommand Phones
+        {
+            get => phones ??= new DelegateCommand(async () => await NavigationService.NavigateAsync(nameof(PhonesPage)));
+        }
+
+        private ICommand menu;
+        public ICommand Menu
+        {
+            get => menu ??= new DelegateCommand(async () => await NavigationService.NavigateAsync(nameof(MenuPage)));
+        }
     }
 }
