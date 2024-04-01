@@ -11,7 +11,6 @@
           BackgroundColor="#F2FEFF">
 
         <Frame Grid.Row="0"
-               Grid.ColumnSpan="5"
                BackgroundColor="#255AA6"
                Padding="0, 16">
             <Label Text="НАЦІОНАЛЬНИЙ УНІВЕРСИТЕТ&#xD;''ЗАПОРІЗЬКА ПОЛІТЕХНІКА''"
@@ -24,7 +23,7 @@
 
         <Label Grid.Row="1"
                Grid.ColumnSpan="5"
-               Text="Name of news"
+               Text="{Binding Name}"
                TextColor="#255AA6"
                FontSize="24"
                FontAttributes="Bold"
@@ -33,7 +32,7 @@
 
         <Label Grid.Row="2"
                Grid.ColumnSpan="5"               
-               Text="News News News News News News News News News News News News News News News News News News News News News News News News News "
+               Text= "{Binding Text}"
                FontSize="20"
                TextColor="#000000"
                Margin="10"/>

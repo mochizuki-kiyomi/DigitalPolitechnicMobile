@@ -4,10 +4,7 @@ using System.Text;
 
 namespace DigitalPolitechnicMobile.Services
 {
-    class ImportantAnnounce
+    internal class News
     {
-
-        private int? Id;
-        private string Name = "news";
     }
 }

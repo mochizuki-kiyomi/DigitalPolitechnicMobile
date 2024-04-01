@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DigitalPolitechnicMobile.Views.MapPage">
+    <ContentPage.Content>
+
+        <Grid RowDefinitions="70, 65, *, 70" 
+       ColumnDefinitions="*, *, *, *, *"
+       BackgroundColor="#F2FEFF">
+
+            <Frame Grid.Row="0"
+                   Grid.ColumnSpan="5"
+                   BackgroundColor="#255AA6"
+                   Padding="0, 16">
+                <Label Text="НАЦІОНАЛЬНИЙ УНІВЕРСИТЕТ&#xD;''ЗАПОРІЗЬКА ПОЛІТЕХНІКА''"
+                       FontAttributes="Bold"
+                       FontSize="20"
+                       HorizontalTextAlignment="Center"
+                       TextColor="#FFCC00"/>
+            </Frame>
+
+            <Label Grid.Row="1"
+                   Grid.ColumnSpan="5"
+                   Text="ПУТІВНИК СТУДЕНТА"
+                   TextColor="#255AA6"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"/>
+
+
+
+
+        </Grid>
+
+
+    </ContentPage.Content>
+</ContentPage>

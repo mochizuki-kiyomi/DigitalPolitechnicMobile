@@ -11,5 +11,21 @@ namespace DigitalPolitechnicMobile.ViewModels
         public AnnouncementViewModel(INavigationService navigationService) : base(navigationService)
         {
         }
+
+
+        private string name;
+        public string Name
+        {
+            get { return name; }
+            set { SetProperty(ref name, value); }
+        }
+
+        private string text;
+        public string Text
+        {
+            get { return text; }
+            set { SetProperty(ref text, value); }
+        }
+
     }
 }

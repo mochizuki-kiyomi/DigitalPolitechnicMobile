@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:services="clr-namespace:DigitalPolitechnicMobile.Services"
+             xmlns:services="clr-namespace:DigitalPolitechnicMobile.Services" 
+             xmlns:viewmodels="clr-namespace:DigitalPolitechnicMobile.ViewModels" 
+             x:DataType="viewmodels:HomeViewModel"
              x:Class="DigitalPolitechnicMobile.Views.HomePage">
     <ContentPage.Content>
 
@@ -39,7 +41,7 @@
                                    VerticalOptions="Center"
                                    HorizontalOptions="Center"
                                    x:DataType="services:ImportantAnnounce"
-                                   Text="{Binding Name}"/>
+                                   Text="lkjnl"/>
                         </Frame>
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
@@ -48,7 +50,7 @@
             <ListView Grid.Row="2"
                       Grid.ColumnSpan="5"
                       x:Name="AnnouncementList"
-                      ItemsSource="{Binding News}"
+                      ItemsSource="Binding News}"
                       Margin="30, 10, 30, 5"
                       BackgroundColor="#B6D2D4">
                 <ListView.ItemTemplate>
