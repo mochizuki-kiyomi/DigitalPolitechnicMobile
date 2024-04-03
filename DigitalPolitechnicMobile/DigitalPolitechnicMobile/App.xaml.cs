@@ -28,14 +28,15 @@ namespace DigitalPolitechnicMobile
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
 
-            containerRegistry.RegisterForNavigation<LogInPage, LogInViewModel>();
-            
+            containerRegistry.RegisterForNavigation<LogInPage, LogInViewModel>();            
+
             containerRegistry.RegisterForNavigation<HomePage, HomeViewModel>();
-            containerRegistry.RegisterForNavigation<AnnouncementPage, AnnouncementViewModel>();
-
-            containerRegistry.RegisterForNavigation<MenuPage,  MenuViewModel>();
             containerRegistry.RegisterForNavigation<MapPage, MapViewModel>();
+            containerRegistry.RegisterForNavigation<ProfilePage, ProfileViewModel>();
+            containerRegistry.RegisterForNavigation<PhonesPage, PhonesViewModel>();
+            containerRegistry.RegisterForNavigation<MenuPage,  MenuViewModel>();
 
+            containerRegistry.RegisterForNavigation<AnnouncementPage, AnnouncementViewModel>();
 
 
         }

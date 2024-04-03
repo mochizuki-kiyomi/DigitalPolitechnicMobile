@@ -1,10 +1,79 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:DigitalPolitechnicMobile.ViewModels" x:DataType="viewmodels:PhonesViewModel"
              x:Class="DigitalPolitechnicMobile.Views.PhonesPage">
-  <ContentView.Content>
-      <StackLayout>
-          <Label Text="Hello Xamarin.Forms!" />
-      </StackLayout>
-  </ContentView.Content>
-</ContentView>
+    <ContentPage.Content>
+
+        <Grid RowDefinitions="70, 65, *, 70" 
+           ColumnDefinitions="*, *, *, *, *"
+           BackgroundColor="#F2FEFF">
+
+            <Frame Grid.Row="0"
+    Grid.ColumnSpan="5"
+    BackgroundColor="#255AA6"
+    Padding="0, 16">
+                <Label Text="НАЦІОНАЛЬНИЙ УНІВЕРСИТЕТ&#xD;''ЗАПОРІЗЬКА ПОЛІТЕХНІКА''"
+        FontAttributes="Bold"
+        FontSize="20"
+        HorizontalTextAlignment="Center"
+        TextColor="#FFCC00"/>
+            </Frame>
+
+            <Label Grid.Row="1"
+                Grid.ColumnSpan="5"
+                Text="Phones"
+                TextColor="#255AA6"
+                FontSize="24"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"/>
+
+
+
+
+            <Frame Grid.Row="3"
+Grid.ColumnSpan="5"
+BackgroundColor="#C8E9EC"/>
+
+            <Button Grid.Row="3"
+ Grid.Column="0"
+ Text="🏠"
+ FontSize="24"
+ BackgroundColor="Transparent"
+ Margin="10"
+     Command="{Binding Home}"/>
+            <Button Grid.Row="3"
+ Grid.Column="1"
+ Text="🗺"
+ FontSize="24"
+ BackgroundColor="Transparent"
+ Margin="10"
+     Command="{Binding Map}"/>
+            <Button Grid.Row="3"
+ Grid.Column="2"
+ Text="👤"
+ FontSize="24"
+ BackgroundColor="Transparent"
+ Margin="10"
+     Command="{Binding Profile}"/>
+            <Button Grid.Row="3"
+ Grid.Column="3"
+ Text="☎️"
+ FontSize="24"
+ BackgroundColor="Transparent"
+ Margin="10"
+     Command="{Binding Phones}"/>
+            <Button Grid.Row="3"
+ Grid.Column="4"
+ Text="☰"
+ FontSize="24"
+ TextColor="#000000"
+ BackgroundColor="Transparent"
+ Margin="10"
+     Command="{Binding Menu}"/>
+
+        </Grid>
+
+
+    </ContentPage.Content>
+</ContentPage>

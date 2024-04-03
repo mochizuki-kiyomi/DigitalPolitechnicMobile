@@ -87,7 +87,6 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\DigitalPolitechnicMobile\DigitalPolitechnicMobile.csproj">
       <Project>{56A2170F-BF59-4EF9-824D-7B9A4A92AE25}</Project>

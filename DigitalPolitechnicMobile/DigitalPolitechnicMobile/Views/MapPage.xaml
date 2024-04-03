@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:DigitalPolitechnicMobile.ViewModels" 
+             x:DataType="viewmodels:MapViewModel"
              x:Class="DigitalPolitechnicMobile.Views.MapPage">
     <ContentPage.Content>
 
@@ -29,11 +31,51 @@
                    VerticalTextAlignment="Center"/>
 
 
-            <Image Source=""/>
+            <Image Source="nuzp_pr.jpg"
+                   Margin="10"/>
 
 
 
+            <Frame Grid.Row="3"
+   Grid.ColumnSpan="5"
+   BackgroundColor="#C8E9EC"/>
 
+            <Button Grid.Row="3"
+    Grid.Column="0"
+    Text="🏠"
+    FontSize="24"
+    BackgroundColor="Transparent"
+    Margin="10"
+        Command="{Binding Home}"/>
+            <Button Grid.Row="3"
+    Grid.Column="1"
+    Text="🗺"
+    FontSize="24"
+    BackgroundColor="Transparent"
+    Margin="10"
+        Command="{Binding Map}"/>
+            <Button Grid.Row="3"
+    Grid.Column="2"
+    Text="👤"
+    FontSize="24"
+    BackgroundColor="Transparent"
+    Margin="10"
+        Command="{Binding Profile}"/>
+            <Button Grid.Row="3"
+    Grid.Column="3"
+    Text="☎️"
+    FontSize="24"
+    BackgroundColor="Transparent"
+    Margin="10"
+        Command="{Binding Phones}"/>
+            <Button Grid.Row="3"
+    Grid.Column="4"
+    Text="☰"
+    FontSize="24"
+    TextColor="#000000"
+    BackgroundColor="Transparent"
+    Margin="10"
+        Command="{Binding Menu}"/>
 
         </Grid>
 

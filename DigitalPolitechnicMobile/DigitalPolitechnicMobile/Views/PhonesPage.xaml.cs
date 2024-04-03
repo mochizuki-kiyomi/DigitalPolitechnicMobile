@@ -9,12 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace DigitalPolitechnicMobile.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PhonesPage : ContentView
-    {
-        public PhonesPage()
-        {
-            InitializeComponent();
-        }
-    }
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class PhonesPage : ContentPage
+	{
+		public PhonesPage ()
+		{
+			InitializeComponent ();
+		}
+	}
 }
