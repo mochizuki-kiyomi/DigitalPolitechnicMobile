@@ -76,32 +76,37 @@
                 Text="🏠"
                 FontSize="24"
                 BackgroundColor="Transparent"
-                Margin="10"/>
+                Margin="10"
+                    Command="{Binding Home}"/>
             <Button Grid.Row="3"
                 Grid.Column="1"
                 Text="🗺"
                 FontSize="24"
                 BackgroundColor="Transparent"
-                Margin="10"/>
+                Margin="10"
+                    Command="{Binding Map}"/>
             <Button Grid.Row="3"
                 Grid.Column="2"
                 Text="👤"
                 FontSize="24"
                 BackgroundColor="Transparent"
-                Margin="10"/>
+                Margin="10"
+                    Command="{Binding Profile}"/>
             <Button Grid.Row="3"
                 Grid.Column="3"
                 Text="☎️"
                 FontSize="24"
                 BackgroundColor="Transparent"
-                Margin="10"/>
+                Margin="10"
+                    Command="{Binding Phones}"/>
             <Button Grid.Row="3"
                 Grid.Column="4"
                 Text="☰"
                 FontSize="24"
                 TextColor="#000000"
                 BackgroundColor="Transparent"
-                Margin="10"/>
+                Margin="10"
+                    Command="{Binding Menu}"/>
         </Grid>
 
     </ContentPage.Content>
